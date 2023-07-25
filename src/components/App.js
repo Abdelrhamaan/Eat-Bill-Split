@@ -83,7 +83,10 @@ export default function App() {
         )}
       </div>
       {selectedFriend && (
+        /* here we added key to make every 
+        instance component unique so reset the state for every friend  */
         <FormSplitBill
+          key={selectedFriend.id}
           selectedFriend={selectedFriend}
           onSelection={handleSelectedFriend}
           onSubmitBill={handleSplitBill}
